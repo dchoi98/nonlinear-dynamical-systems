@@ -9,7 +9,7 @@ Differential equations relate functions to their derivatives. They show up in fi
 Most nonlinear differential equations can only be solved analytically for special initial conditions, so we usually have to solve them numerically. The simplest approach is Euler's method. Starting from a known point, you compute the slope of the tangent line there, step forward by some small increment *h*, and use the slope to estimate the function's value at the new point. Then you repeat. More steps over a given interval means a smaller *h* and a better approximation. The interactive plot in the notebook shows how the approximation improves as the number of steps increases for the ODE *y'(x) = x²y(x) − (3/2)y(x)*, *y(0) = 1*.
 
 <p align="center">
-  <img src="imgs/eulers\_method.gif" alt="Euler's method converging to the exact solution" width="500">
+  <img src="imgs/eulers_method.gif" alt="Euler's method converging to the exact solution" width="500">
 </p>
 
 Euler's method is fast but not particularly accurate. The higher-order methods used by `NDSolve` are more precise, but the underlying idea of stepping forward using local derivative information is the same.
@@ -29,13 +29,13 @@ $$V = m g y\_1 + m g y\_2$$
 The Lagrangian is *L = T − V*. Applying the Euler–Lagrange equations for each generalized coordinate gives two coupled second-order ODEs in *θ₁* and *θ₂*, which are solved numerically with `NDSolve`.
 
 <p align="center">
-  <img src="imgs/double\_pendulum.gif" alt="Double pendulum simulation" width="450">
+  <img src="imgs/double_pendulum.gif" alt="Double pendulum simulation" width="450">
 </p>
 
 The motion of the double pendulum is highly sensitive to initial conditions. The two simulations below use identical parameters and starting conditions for the inner pendulum. The outer pendulums start with the same angular velocity and a difference in angle of only *Δθ* = 0.0001. At first the two systems move in sync, but they quickly diverge until their motions look completely unrelated.
 
 <p align="center">
-  <img src="imgs/diverging\_double\_pendulums.gif" alt="Two double pendulums diverging from nearly identical initial conditions" width="450">
+  <img src="imgs/diverging_double_pendulums.gif" alt="Two double pendulums diverging from nearly identical initial conditions" width="450">
 </p>
 
 ## Swinging Atwood's Machine
@@ -53,17 +53,17 @@ $$V = -m g r \\cos\\theta + \\mu g r$$
 Forming *L = T − V* and applying the Euler–Lagrange equations for *r* and *θ* gives two coupled second-order ODEs, solved numerically with `NDSolve`.
 
 <p align="center">
-  <img src="imgs/swinging\_atwoods\_machine.gif" alt="Swinging Atwood's machine animation for μ = 4.5" width="450">
+  <img src="imgs/swinging_atwoods_machine.gif" alt="Swinging Atwood's machine animation for μ = 4.5" width="450">
 </p>
 
 For certain mass ratios the swinging mass traces out complex but periodic orbits. The figures below show the trajectories for various values of *μ*, each producing a distinct pattern.
 
 <p align="center">
-  <img src="imgs/mu\_3.jpg" alt="Swinging Atwood's machine trajectory for μ = 3" width="450">
+  <img src="imgs/mu_3.jpg" alt="Swinging Atwood's machine trajectory for μ = 3" width="450">
 </p>
 
 <p align="center">
-  <img src="imgs/mu\_5\_6\_16\_19.jpg" alt="Swinging Atwood's machine trajectories for μ = 5, 6, 16, and 19" width="600">
+  <img src="imgs/mu_5_6_16_19.jpg" alt="Swinging Atwood's machine trajectories for μ = 5, 6, 16, and 19" width="600">
 </p>
 
 ## Three-Body Problem
@@ -81,6 +81,6 @@ $$V = -\\frac{G m\_1 m\_2}{|\\mathbf{r}\_1 - \\mathbf{r}\_2|} - \\frac{G m\_1 m\
 With *L = T − V*, the Euler–Lagrange equation for each coordinate produces nine coupled second-order ODEs, solved numerically with `NDSolve`.
 
 <p align="center">
-  <img src="imgs/three\_body.gif" alt="Three-body problem simulation" width="450">
+  <img src="imgs/three_body.gif" alt="Three-body problem simulation" width="450">
 </p>
 
